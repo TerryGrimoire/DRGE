@@ -378,7 +378,7 @@ width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid red 3px;
+  border: solid var(--third-color) 3px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -555,4 +555,49 @@ width: 80%;
 .home_bourse .CTA_container a{
   margin-left: 0;
   margin-right: 20px;
+}
+
+.home_chiffres {
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_chiffres h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70%;
+}
+
+.home_chiffres_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.home_chiffres_content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 1rem;
+  width: 30%;
+}
+
+.home_chiffres_content div h5 {
+  font-size: 5.5rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: var(--third-color);
+}
+
+.home_chiffres_content div p {
+  font-weight: bold;
 }

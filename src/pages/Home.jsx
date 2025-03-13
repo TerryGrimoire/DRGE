@@ -107,13 +107,15 @@ export default function Home({ helmet }) {
         <img src={bourse} alt="effets scolaires eparpillés" />
         <div className="veil" />
         <div className="home_bourse_content">
-          <h4>Aidez un étudiant réunionnais à réussir ses études</h4>
+          <h4>Vous êtes étudiant et souhaitez un accompagnement ?</h4>
           <p>
-            Chaque don compte pour financer nos actions et permettre à nos
-            bénéficiaires de continuer leurs études. Les donations permettent
-            non seulement de financer des bourses d'installations mais également
-            à notre association de rémunérer des intervenants exterieurs lors de
-            nos sessions de formation.
+            Nous pouvons vous aider à trouver dans chaque étape de votre
+            parcours académique. Que ce soit dans le choix de l'orientation, la
+            préparation à un concours pour intégrer une école ou encore grâce à
+            notre programme de bourses d'études pour vous aider dans votre
+            installation en dehors du territoire réunionnais. Pour les étudiants
+            souhaitant rentrer au péi, nous pouvons vous aider à trouver un
+            stage grâce à notre réseau de partenaires.{" "}
           </p>
           <div className="CTA_container">
             <Link to="/Actions">
@@ -122,22 +124,21 @@ export default function Home({ helmet }) {
                 <img src={fleche2} alt="fleche" className="fleche" />
               </button>
             </Link>
-            <a
-              hreref="https://www.helloasso.com/associations/la-reunion-aux-grandes-ecoles/formulaires/1"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link to="/Contact">
               <button type="button">
-                <p>Faire un don</p>
+                <p>Nous contacter</p>
                 <img src={fleche} alt="fleche" className="fleche" />
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-      <section className="chiffres">
-        <h2>Quelques chiffres</h2>
-        <div>
+      <section className="home_chiffres">
+        <h4>
+          De La Réunion aux grandes écoles accompagne les étudiants réunionnais
+          vers la réussite académique et professionnelle depuis 2019.
+        </h4>
+        <div className="home_chiffres_content">
           {chiffres.map((chiffre) => (
             <div>
               <h5>{chiffre.titre}</h5> <p>{chiffre.texte}</p>
@@ -157,6 +158,14 @@ export default function Home({ helmet }) {
           ))}
         </div>
       </section>
+      <p>
+        {" "}
+        Aidez un étudiant réunionnais à réussir ses études //Chaque don compte
+        pour financer nos actions et permettre à nos bénéficiaires de continuer
+        leurs études. Les donations permettent non seulement de financer des
+        bourses d'installations mais également à notre association de rémunérer
+        des intervenants exterieurs lors de nos sessions de formation.
+      </p>
     </main>
   );
 }
