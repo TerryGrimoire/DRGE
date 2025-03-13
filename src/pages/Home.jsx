@@ -147,13 +147,16 @@ export default function Home({ helmet }) {
         </div>
       </section>
       <section className="home_actions">
-        <h2>Nos actions</h2>
+        <h2>Nos différentes actions</h2>
         <div>
           {actions.map((action) => (
-            <div>
+            <div className="home_actions_content">
               <img src={action.img} alt={action.alt} />
-              <h5>{action.titre}</h5>
-              <p>{action.texte}</p>
+              <article>
+                <h5>{action.titre}</h5>
+                <p> {action.texte} </p>
+                <Link to="/Actions">En savoir plus</Link>
+              </article>
             </div>
           ))}
         </div>
