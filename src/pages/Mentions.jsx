@@ -6,15 +6,15 @@ function Mentions() {
   }, []);
 
   const information = {
-    siteLink: " https://lemontecito.fr ",
-    companyName: " Le Montecito ",
-    ownerName: " Simon Giraudet ",
-    email: " lemontecito1011@gmail.com ",
-    phone: " 09 86 50 12 07 ",
-    address: " 6 All. Duquesne, 44000, Nantes.",
-    hostName: " 1and1 ",
-    hostAddress: " Test des addresses 44300 Host",
-    hostPhone: " 01.02.03.04.05 ",
+    siteLink: " https://delareunionauxgrandesecoles.fr ",
+    companyName: " De La Réunion aux grandes écoles ",
+    ownerName: " De La Réunion aux grandes écoles ",
+    email: " reunion@dtge.org ",
+    phone: " reunion@dtge.org ",
+    address: " reunion@dtge.org. ",
+    hostName: " Hostinger ",
+    hostAddress: " Hostinger International Ltd. 61 Rue Lordou Vironos, 6023 ",
+    hostPhone: " +37064503378 ",
   };
 
   return (

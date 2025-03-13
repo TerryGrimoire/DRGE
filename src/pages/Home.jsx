@@ -1,49 +1,64 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Image from "../components/Home/LandingPage/Image";
+import video from "../assets/video2.mp4";
+import logo from "../assets/logo3.png";
+import fleche from "../assets/fleche.png";
+import fleche2 from "../assets/fleche2.png";
 
 export default function Home({ helmet }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    // Ensure video is loaded and ready to play for autoplay to work reliably
+    if (videoElement) {
+      videoElement.load();
+      videoElement.play().catch((error) => {
+        console.error("Autoplay was prevented on iOS:", error);
+      });
+    }
+  }, []);
   return (
-    <main className="flex-col">
+    <main className="home_main">
       <Helmet>
         <title> {helmet.title} | Accueil </title>
         <link rel="canonical" href={helmet.href} />
         <meta name="description" content={helmet.description} />
       </Helmet>
 
-      {/*
-
-        Options here :
-        -  Main image Style - Landing page like Charles Portefolio (main image + title in the middle) 
-        -  Main video Style - Landing page like Barber 902 (main vidéo + title in the middle)
-        -  Animation  Style - Landing page like ASMK (main image animated + title in the middle)
- 
-        */}
-
-      <Image title={helmet.title} />
-      <section className="section2">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-          aliquid vel blanditiis. Iste earum tempore, corrupti distinctio nam
-          dignissimos incidunt eveniet in tempora libero! Possimus explicabo
-          architecto aut dolorem blanditiis magni porro maiores dignissimos
-          repellat rem voluptatum, magnam provident at illum atque fugit
-          assumenda eaque minima iste. Quaerat odit suscipit possimus nostrum,
-          libero odio est quo culpa tempore ex tenetur sed esse unde doloremque
-          ea minus rerum laboriosam eveniet labore ipsam voluptate officiis
-          fugiat. Natus minima voluptatem hic eum ad perferendis rerum animi,
-          provident aliquid quisquam, mollitia eaque enim eligendi consequatur
-          nihil eveniet ex corrupti delectus quidem consequuntur! Saepe
-          repudiandae excepturi ut atque dolorum quisquam voluptas laudantium
-          sapiente, obcaecati voluptatibus earum adipisci dolor maiores beatae
-          delectus ab pariatur! Fuga voluptatibus soluta quidem alias suscipit
-          animi, nisi dolorum adipisci veritatis veniam amet aut odio magni,
-          nihil nobis fugit iste expedita ut nulla quas consequuntur debitis?
-          Nihil ipsam dicta saepe temporibus molestiae!
-        </p>
+      <section className="home_top">
+        <div className="veil" />
+        <video
+          ref={videoRef}
+          src={video} // Replace with your video URL
+          autoPlay
+          muted
+          loop
+        />
+        <div className="home_top_content">
+          <img src={logo} alt="logo de La Réunion aux grandes écoles" />
+          <h1 className="typing_effect">Informer, accompagner, fédérer</h1>
+          <div className="CTA_container">
+            <Link to="/Actions">
+              <button type="button">
+                <p>Découvrir nos actions</p>{" "}
+                <img src={fleche2} alt="fleche" className="fleche" />
+              </button>
+            </Link>
+            <Link to="/Contact">
+              <button type="button">
+                <p>Nous soutenir</p>
+                <img src={fleche} alt="fleche" className="fleche" />
+              </button>
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );
