@@ -2,7 +2,6 @@ import interventions from "../assets/interventions.jpg";
 import mentorat from "../assets/mentorat.jpg";
 import bourse from "../assets/bourse.jpg";
 import rencontres from "../assets/rencontres.jpg";
-import profils from "../assets/profil.png";
 
 const actionsFr = [
   {
@@ -36,14 +35,6 @@ const actionsFr = [
     titre: "Rencontre avec les acteurs institutionnels",
     texte:
       "Au travers de rencontres avec tous ceux qui font vivre nos territoires, entreprises, institutionnels et associations, nous voulons contribuer à valoriser les réussites d'aujourd'hui et à construire celles de demain. Parce que l'action ne se passe pas uniquement à l'échelle locale mais beaucoup à l'échelle nationale, DRGE a sauté la mer pour rencontrer différents membres du ministère des outre-mers et échanger avec eux sur les problématiques d'égalité des chances dans notre territoire.",
-  },
-  {
-    id: 4,
-    img: profils,
-    alt: "",
-    titre: "Publications de profils de réunionnais",
-    texte:
-      "Se projeter dans une future formation et un futur professionnel est une étape cruciale et compliquée dans la vie d'un lycéen. Afin de permettre aux lycéens de mieux se projeter, DRGE organise et publie des entretiens avec des étudiants et des professionnels réunionnais sur les réseaux sociaux.",
   },
 ];
 

@@ -648,6 +648,10 @@ width: 80%;
   margin-bottom: 20px;
 }
 
+.home_actions_content article h5 span {
+  color: var(--third-color);
+}
+
 .home_actions_content article p {
   font-size: 1rem;
   color: lightgray;
@@ -659,5 +663,101 @@ width: 80%;
   padding: 10px 0 0;
   font-weight: bold;
   font-size: 0.85rem;
+}
+/********************************************************************* FOOTER *********************************************************************/ 
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.footer .footer_donation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  width: 100%;
+  background: #ECECEC;
+}
+
+.footer_donation * {
+  background-color: transparent;
+}
+
+.footer_donation > h4 {
+  font-size: 2rem;
+  width: 50%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer_donation > p {
+  width: 60%;
+  text-align: center;
+  margin: 10px 0;
+}
+.footer_donation a:last-of-type button{
+  color: black;
+  border: 3px solid black;
+  display: flex;
+}
+
+.footer_contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_contact > img {
+  width: 350px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.footer_contact p:first-of-type {
+  margin: 20px 0;
+}
+.footer_contact p:last-of-type {
+  margin: 5px 0;
+  width: 80%;
+  text-align: center;
+}
+
+.footer_contact a {
+  color: var(--third-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer_contact div img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.footer_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+}
+
+.footer_bottom a {
+  margin: 0 15px;
+  color: white;
+  background-color: transparent;
+  font-size: 0.8rem;
+}
+
+.footer_bottom a:hover {
+  color: var(--third-color);
 }
 

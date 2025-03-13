@@ -153,7 +153,13 @@ export default function Home({ helmet }) {
             <div className="home_actions_content">
               <img src={action.img} alt={action.alt} />
               <article>
-                <h5>{action.titre}</h5>
+                <h5>
+                  <span>{action.titre.split(" ")[0]}</span>{" "}
+                  {action.titre
+                    .split(" ")
+                    .filter((el) => el !== action.titre.split(" ")[0])
+                    .join(" ")}
+                </h5>
                 <p> {action.texte} </p>
                 <Link to="/Actions">En savoir plus</Link>
               </article>
@@ -161,14 +167,6 @@ export default function Home({ helmet }) {
           ))}
         </div>
       </section>
-      <p>
-        {" "}
-        Aidez un étudiant réunionnais à réussir ses études //Chaque don compte
-        pour financer nos actions et permettre à nos bénéficiaires de continuer
-        leurs études. Les donations permettent non seulement de financer des
-        bourses d'installations mais également à notre association de rémunérer
-        des intervenants exterieurs lors de nos sessions de formation.
-      </p>
     </main>
   );
 }
