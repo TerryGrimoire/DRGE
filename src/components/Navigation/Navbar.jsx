@@ -9,11 +9,13 @@ import Youtube from "../../assets/youtube.png";
 function Navbar() {
   return (
     <div className="desktop navbar">
-      <img
-        src={logo}
-        alt="logo de La Réunion aux grandes écoles"
-        className="logo"
-      />
+      <Link to="/">
+        <img
+          src={logo}
+          alt="logo de La Réunion aux grandes écoles"
+          className="logo"
+        />
+      </Link>
       <div className="navigation">
         <Link to="/">Accueil</Link>
         <Link to="/Actions">Nos actions</Link>

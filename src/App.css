@@ -264,7 +264,7 @@ width: 100%;
 }
 /********************************************************************* HEADER *********************************************************************/ 
 .header {
-  position: fixed;
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -372,7 +372,7 @@ width: 100%;
 }
 
 .CTA_container button{
-  background-color: red;
+  background-color: var(--third-color);
   border-radius: 1rem;
   padding: 15px 20px;
   display: flex;
@@ -404,4 +404,97 @@ width: 100%;
   width: 1.2rem;
   object-fit: contain;
   margin-left: 10px;
+}
+
+.home_presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.home_presentation > img {
+  width: 60%;
+  padding: 0 50px;
+}
+
+.home_presentation div  {
+width: 80%;
+}
+  .home_presentation div p {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.home_missions {
+  padding: 0px 150px 50px;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home_missions h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 60px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home_missions > div * {
+  background-color: transparent;
+  color: white;
+}
+
+.home_missions > div {
+  background-color: transparent;
+  background-color: var(--secondary-bg-color);
+  border-radius: 2rem;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.home_missions > div > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 40%;
+  padding:30px;
+  background-color: transparent;
+}
+
+.home_missions img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin: 10px 0 0;
+}
+
+.home_missions h5 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 30px 0 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.home_missions p {
+  font-size: 1rem;
+  width: 85%;
+  text-align: left;
+}
+
+.home_missions a {
+  color: var(--third-color);
+  font-size: 0.85rem;
+  padding: 15px 0;
 }

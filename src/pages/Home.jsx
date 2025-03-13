@@ -1,10 +1,17 @@
+/* eslint-disable import/no-unresolved */
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+
+import actions from "../data/actionsFR";
+import chiffres from "../data/chiffresFR";
+import missions from "../data/missionsFR";
+
 import video from "../assets/video2.mp4";
 import logo from "../assets/logo3.png";
 import fleche from "../assets/fleche.png";
 import fleche2 from "../assets/fleche2.png";
+import presentation from "../assets/presentation.jpg";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -58,6 +65,63 @@ export default function Home({ helmet }) {
               </button>
             </Link>
           </div>
+        </div>
+      </section>
+      <section className="home_presentation">
+        <img
+          src={presentation}
+          alt="membres de La Réunion aux grandes écoles et des étudiants boursiers recevant leur bourse de l'association"
+        />
+        <div>
+          <h3>Qui sommes nous ? </h3>
+          <p>
+            Notre île rayonne par les compétences et le dynamisme de notre
+            jeunesse. Pourtant, cette jeunesse est souvent délaissée et n'a pas
+            toutes les clés en main pour penser de la meilleure manière possible
+            son cursus d'étudiant et son parcours professionnel. De La Réunion
+            Aux Grandes Ecoles existe donc dans le but d'accompagner cette
+            jeunesse par l'expérience des actuels étudiants et professionnels.
+          </p>
+          <p>
+            Elle a également pour but de rendre plus facile cette transition du
+            lycée vers l'enseignement supérieur en leur donnant un maximum de
+            réponses à travers différentes ressources accessibles sur de
+            multiples plateformes.
+          </p>
+        </div>
+      </section>
+      <section className="home_missions">
+        <h2>Nos missions principales</h2>
+        <div>
+          {missions.map((mission) => (
+            <div>
+              <img src={mission.img} alt={mission.alt} />
+              <h5>{mission.titre}</h5> <p>{mission.texte}</p>
+              <Link to="/Actions">En savoir plus</Link>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="chiffres">
+        <h2>Quelques chiffres</h2>
+        <div>
+          {chiffres.map((chiffre) => (
+            <div>
+              <h5>{chiffre.titre}</h5> <p>{chiffre.texte}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="home_actions">
+        <h2>Nos actions</h2>
+        <div>
+          {actions.map((action) => (
+            <div>
+              <img src={action.img} alt={action.alt} />
+              <h5>{action.titre}</h5>
+              <p>{action.texte}</p>
+            </div>
+          ))}
         </div>
       </section>
     </main>
