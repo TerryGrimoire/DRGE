@@ -1019,12 +1019,14 @@ align-items: center;
 }
 
 .avantages div {
-  padding: 50px;
+  padding: 80px  50px 120px;
   margin-top: 60px;
   background-color: var(--third-color);
+  width: 50%;
+  position: relative;
 }
 
-.avantages div:last-of-type {
+.avantages > div:last-of-type {
   background-color: var(--secondary-bg-color);
 }
 .avantages div * {
@@ -1051,12 +1053,18 @@ align-items: center;
   margin: 20px 0;
 }
 
-.action_content .CTA {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 40px;
-  border: saddlebrown 1px solid;
+.avantages div button {
+ position: absolute;
+ bottom: 50px;
+ left: 40px;
+ padding: 10px 20px;
+ border-radius: 0.5rem;
+ margin: 5px;
+ background-color: white;
+ color: black;
+ border: none;
+ font-weight: bold;
+ cursor: pointer;
 }
 /********************************************************************* CONTACT *********************************************************************/ 
 /********************************************************************* ERREUR404 *********************************************************************/ 

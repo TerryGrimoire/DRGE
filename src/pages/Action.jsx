@@ -86,7 +86,6 @@ function Action({ helmet }) {
               </li>
             ))}
           </ul>
-          <h3>Les avantages</h3>
           <section className="avantages">
             <div>
               <h5>{actionData.avantages1.split(":")[0]}</h5>
@@ -100,6 +99,12 @@ function Action({ helmet }) {
                     </li>
                   ))}
               </ul>
+
+              <a href={actionData.agir.split("::")[1]}>
+                <button type="button">
+                  {actionData.agir.split("::")[0].split(";")[0]}
+                </button>
+              </a>
             </div>
             <div>
               <h5>{actionData.avantages2.split(":")[0]}</h5>
@@ -113,19 +118,13 @@ function Action({ helmet }) {
                     </li>
                   ))}
               </ul>
+              <a href={actionData.agir.split("::")[1]}>
+                <button type="button">
+                  {actionData.agir.split("::")[0].split(";")[1]}
+                </button>
+              </a>
             </div>
           </section>
-          <div className="CTA">
-            {actionData.agir
-              .split("::")[0]
-              .split(";")
-              .map((em) => (
-                <a href={actionData.agir.split("::")[1]}>
-                  <button type="button">{em}</button>
-                  <p>{actionData.agir.split("::")[1]}</p>
-                </a>
-              ))}
-          </div>
         </section>
       ) : (
         <p>chargement de la page</p>
