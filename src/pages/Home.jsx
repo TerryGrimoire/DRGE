@@ -1,10 +1,10 @@
 /* eslint-disable import/no-unresolved */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import papa from "papaparse";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import actions from "../data/actionsFR";
-import chiffres from "../data/chiffresFR";
 import missions from "../data/missionsFR";
 
 import video from "../assets/video2.mp4";
@@ -32,6 +32,44 @@ export default function Home({ helmet }) {
       });
     }
   }, []);
+
+  const [data, setData] = useState([]);
+
+  const prepareData = (data2) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data2.map((line) => {
+      data2[0].forEach((key, j) => {
+        obj = { ...obj, [key]: line[j] };
+      });
+
+      return obj;
+    });
+
+    json.shift();
+    setData(json);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    fetch(import.meta.env.VITE_HOME)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data2) => prepareData(data2.data));
+  }, []);
+
+  const chiffres = data.map((chiffre) => {
+    return {
+      numero: chiffre.chiffres,
+      commentaire: chiffre.commentaire,
+      traduction: chiffre.traduction,
+    };
+  });
+
   return (
     <main className="home_main">
       <Helmet>
@@ -141,7 +179,7 @@ export default function Home({ helmet }) {
         <div className="home_chiffres_content">
           {chiffres.map((chiffre) => (
             <div>
-              <h5>{chiffre.titre}</h5> <p>{chiffre.texte}</p>
+              <h5>{chiffre.numero}</h5> <p>{chiffre.commentaire}</p>
             </div>
           ))}
         </div>

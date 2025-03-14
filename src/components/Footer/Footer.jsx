@@ -1,5 +1,7 @@
-import React from "react";
+/* eslint-disable import/no-unresolved */
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import papa from "papaparse";
 
 import logo from "../../assets/logo.png";
 import fleche from "../../assets/fleche.png";
@@ -8,6 +10,37 @@ import region from "../../assets/region.png";
 import ue from "../../assets/ue.png";
 
 function Footer() {
+  const [data, setData] = useState([]);
+
+  const prepareData = (data2) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data2.map((line) => {
+      data2[0].forEach((key, j) => {
+        obj = { ...obj, [key]: line[j] };
+      });
+
+      return obj;
+    });
+
+    json.shift();
+    setData(json);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    fetch(import.meta.env.VITE_HOME)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data2) => prepareData(data2.data));
+  }, []);
+
+  const partenaires = data.map((partenaire) => partenaire.partenaires);
+
   return (
     <footer className="footer">
       <section className="footer_donation">
@@ -65,6 +98,14 @@ function Footer() {
         <div>
           <img src={region} alt="logo Région Réunion" />
           <img src={ue} alt="logo de l'Union Européenne" />
+        </div>
+      </section>
+      <section className="footer_partenaires">
+        <h4>Découvrez nos partenaires</h4>
+        <div>
+          {partenaires.map((el) => (
+            <img src={el} alt="logo partenaire" />
+          ))}
         </div>
       </section>
       <div className="footer_bottom">
