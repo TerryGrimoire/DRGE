@@ -57,6 +57,7 @@ function Association({ helmet }) {
         <img src={association} alt="" />
         <div className="veil" />
       </section>
+
       <section className="association_content">
         <img
           src={histoire}
@@ -82,6 +83,12 @@ function Association({ helmet }) {
           </p>
         </article>
       </section>
+      <h2 className="citation">
+        <span>"</span>Ce n'est pas parce que les choses sont difficiles que nous
+        n'osons pas. C'est parce que nous n'osons pas qu'elles sont difficiles.{" "}
+        <span>"</span>
+      </h2>
+      <span>Sénèque</span>
       <section className="equipe">
         <h3>L'équipe de direction</h3>
 
