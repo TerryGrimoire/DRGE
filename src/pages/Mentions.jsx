@@ -18,8 +18,8 @@ function Mentions() {
   };
 
   return (
-    <div className="mentions-container">
-      <h2>Mentions Légales</h2>
+    <div className="mentions">
+      <h1>Mentions Légales</h1>
       <p>
         <b>Client :</b> tout professionnel ou personne physique capable au sens
         des articles 1123 et suivants du Code civil, ou personne morale, qui

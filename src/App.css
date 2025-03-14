@@ -664,6 +664,94 @@ width: 80%;
   font-weight: bold;
   font-size: 0.85rem;
 }
+/********************************************************************* ACTIONS *********************************************************************/ 
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 60vh;
+}
+
+.actions_top img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.actions_top .veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 50%;
+}
+
+.actions_top h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--third-color);
+  padding: 20px 40px;
+  border-radius: 2rem 0 0 0;
+}
+
+
+/********************************************************************* MENTIONS *********************************************************************/ 
+.mentions {
+  background-color: black;
+  padding: 60px 15vw;
+}
+
+.mentions * {
+  color: white;
+  background-color: black;
+}
+
+.mentions h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 40px 0;
+  text-align: center;
+  color: var(--third-color);
+}
+.mentions h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+  text-align: left;
+  color: var(--third-color);
+} 
+
+.mentions h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 20px 0;
+  text-align: left;
+} 
+.mentions p {
+  padding: 20px 0;
+  text-align: left;
+}
 /********************************************************************* FOOTER *********************************************************************/ 
 
 .footer {
