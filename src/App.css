@@ -1057,7 +1057,7 @@ align-items: center;
  position: absolute;
  bottom: 50px;
  left: 40px;
- padding: 10px 20px;
+ padding: 15px 20px;
  border-radius: 0.5rem;
  margin: 5px;
  background-color: white;
@@ -1067,6 +1067,59 @@ align-items: center;
  cursor: pointer;
 }
 /********************************************************************* CONTACT *********************************************************************/ 
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact_content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 60px 15vw;
+  box-shadow: var(--box-shadow);
+
+}
+
+.contact_content > * {
+  width: 50%;
+}
+
+.contact_content ul {
+  background-color: var(--secondary-bg-color);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.contact_content ul * {
+  background-color: transparent;
+  color: white;
+
+}
+.contact_content ul li {
+  display: flex;
+  margin: 15px;
+}
+.contact_content ul li img {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+  margin-right: 10px;
+}
+.contact_content ul li a:hover {
+  cursor: pointer;
+  color: var(--third-color);
+}
+.contact_content ul li h5 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 /********************************************************************* ERREUR404 *********************************************************************/ 
 
 /********************************************************************* FOOTER *********************************************************************/ 
