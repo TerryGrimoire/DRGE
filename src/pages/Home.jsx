@@ -136,7 +136,7 @@ export default function Home({ helmet }) {
             <div>
               <img src={mission.img} alt={mission.alt} />
               <h5>{mission.titre}</h5> <p>{mission.texte}</p>
-              <Link to="/Actions">En savoir plus</Link>
+              <Link to={mission.lien}>En savoir plus</Link>
             </div>
           ))}
         </div>
@@ -199,7 +199,7 @@ export default function Home({ helmet }) {
                     .join(" ")}
                 </h5>
                 <p> {action.texte} </p>
-                <Link to="/Actions">En savoir plus</Link>
+                {action.lien && <Link to={action.lien}>En savoir plus</Link>}
               </article>
             </div>
           ))}
