@@ -58,7 +58,7 @@ function Footer() {
         <div className="CTA_container">
           <Link to="/Contact">
             <button type="button">
-              <p>Découvrir vos options</p>{" "}
+              <p>Nous contacter</p>{" "}
               <img src={fleche2} alt="fleche" className="fleche" />
             </button>
           </Link>

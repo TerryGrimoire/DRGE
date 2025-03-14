@@ -156,7 +156,7 @@ export default function Home({ helmet }) {
             stage grâce à notre réseau de partenaires.{" "}
           </p>
           <div className="CTA_container">
-            <Link to="/Actions">
+            <Link to="/Actions/1">
               <button type="button">
                 <p>En savoir plus</p>{" "}
                 <img src={fleche2} alt="fleche" className="fleche" />
