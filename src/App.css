@@ -1327,20 +1327,57 @@ align-items: center;
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 10px;
+  padding: 0px;
   background-color: transparent;
+  position: relative ;
+  z-index: 1500000 !important;
 }
 
 .nav * {
   background-color: transparent;
   border: none;
+  color:white;
+  margin: 2px;
 }
 
 .nav img {
-  height: 40px;
+  height: 50px;
   width: auto;
   background-color: transparent;
 }
+
+.nav .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 105vh;
+  width: 100vw;
+  border: solid 3px yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  z-index: 1500004 !important;
+}
+
+.menu > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu button {
+  font-size: 2rem;
+}
+
+.menu button a {
+  padding: 20px;
+  margin: 0px;
+}
+
 /********************************************************************* HOME *********************************************************************/ 
 .home_main {
   display: flex;
@@ -1452,16 +1489,17 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 100px;
+  padding: 20px;
+  flex-direction: column-reverse;
 }
 
 .home_presentation > img {
-  width: 60%;
-  padding: 0 50px;
+  width: 100%;
+  padding: 0;
 }
 
 .home_presentation div  {
-width: 80%;
+width: 100%;
 }
   .home_presentation div p {
   margin-bottom: 20px;
@@ -1469,13 +1507,14 @@ width: 80%;
 }
 
 .home_missions {
-  padding: 0px 150px 50px;
+  padding: 0px;
   width: 100%;
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 
 .home_missions h2 {
@@ -1496,9 +1535,10 @@ width: 80%;
 .home_missions > div {
   background-color: transparent;
   background-color: var(--secondary-bg-color);
-  border-radius: 2rem;
+  border-radius: 2rem 2rem 0 0;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
@@ -1509,7 +1549,7 @@ width: 80%;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   padding:30px;
   background-color: transparent;
 }
@@ -1545,29 +1585,30 @@ width: 80%;
 .home_bourse {
   overflow: hidden;
   position: relative;
+  min-height: 100vh;
 }
 
-.home_bourse img {
+.home_bourse > img {
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
 }
-
-
 
 .home_bourse .home_bourse_content {
   position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 65%;
+  width: 100%;
   height: 100%;
   top: 0;
   background-color: transparent;
-  padding: 5vw;
   z-index: 3;
 }
 .home_bourse_content p {
-  width: 80%;
+  width: 100%;
 }
 .home_bourse_content * {
   background-color: transparent;
@@ -1575,7 +1616,7 @@ width: 80%;
 }
 
 .home_bourse_content h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -1600,7 +1641,7 @@ width: 80%;
 }
 
 .home_chiffres {
-  padding: 50px 150px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1610,7 +1651,7 @@ width: 80%;
 .home_chiffres h4 {
   font-size: 1.5rem;
   text-align: center;
-  width: 70%;
+  width: 100%;
 }
 
 .home_chiffres_content {
@@ -1630,7 +1671,7 @@ width: 80%;
   padding: 20px;
   margin: 20px 0;
   border-radius: 1rem;
-  width: 30%;
+  width: 100%;
 }
 
 .home_chiffres_content div h5 {
@@ -1656,18 +1697,19 @@ width: 80%;
 
 .home_actions_content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: stretch;
   width: 100%;
-  padding:  0px 12.5vw;
+  padding:  0px 0px;
 }
 
 .home_actions_content:nth-of-type(2n) {
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
 .home_actions_content > * {
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
@@ -1677,7 +1719,7 @@ width: 80%;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 .home_actions_content article * {
