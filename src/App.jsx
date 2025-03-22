@@ -1,9 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Actions from "./pages/Actions";
 import Action from "./pages/Action";
+import Erreur404 from "./pages/Error404";
 import Association from "./pages/Association";
 import Contact from "./pages/Contact";
 import Mentions from "./pages/Mentions";
@@ -24,6 +25,8 @@ function App() {
         <Route path="/Actions/:id" element={<Action helmet={helmet} />} />
         <Route path="/Association" element={<Association helmet={helmet} />} />
         <Route path="/Contact" element={<Contact helmet={helmet} />} />
+        <Route path="/404" element={<Erreur404 helmet={helmet} />} />
+        <Route path="*" element={<Navigate replace to="/404" />} />
         <Route path="/Mentions" element={<Mentions />} />
       </Routes>
       <Footer />
