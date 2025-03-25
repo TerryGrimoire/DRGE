@@ -1315,7 +1315,7 @@ align-items: center;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 2000;
   background-color: transparent;
 }
 
@@ -1350,15 +1350,13 @@ align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  height: 105vh;
-  width: 100vw;
-  border: solid 3px yellow;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: black;
-  z-index: 1500004 !important;
 }
 
 .menu > * {
