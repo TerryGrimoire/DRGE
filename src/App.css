@@ -2067,6 +2067,87 @@ align-items: center;
 
 }
 
+
+/********************************************************************* ACTIONS *********************************************************************/ 
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  height: 60vh;
+}
+
+.actions_top img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.actions_top .veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 50%;
+}
+
+.actions_top h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: var(--third-color);
+  padding: 20px 40px;
+  border-radius: 2rem 0 0 0;
+}
+
+.actions_content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 60px 0;
+}
+
+.actions_content > * {
+  width: 100%;
+  margin: 20px 10px;
+}
+
+.actions_content div img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.actions_content div h5 {
+  width: 100%;
+  height: 20%;
+  background-color: var(--third-color);
+  color: white;
+  padding: 10px;
+  margin: -5px 0 0; 
+  font-size: 1.25rem;
+}
+
 /********************************************************************* ACTION *********************************************************************/ 
 .action {
   width: 100%;
@@ -2074,6 +2155,7 @@ align-items: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 
@@ -2085,7 +2167,7 @@ align-items: center;
   display: flex;
 }
 .action_content > * {
-  padding: 0 15vw;
+  padding: 0 20px;
 }
 .action_content .actions_top {
   padding: 0;
@@ -2111,15 +2193,14 @@ align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-
   margin-top: 60px;
 }
 
 .galerie img {
-  width: 15vw;
-  height: 15vw;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin: 10px;
+  margin: 20px 0;
 }
 
 .action_content .description {
@@ -2128,12 +2209,15 @@ align-items: center;
 }
 .action_content .objectifs  {
   display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .action_content .objectifs img {
   height: 1rem;
   width: 1rem;
   object-fit: contain;
+  margin-right: 5px;
 }
 
 .objectifs li {
@@ -2158,13 +2242,14 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: stretch;
+  flex-direction: column;
 }
 
 .avantages div {
-  padding: 80px  50px 120px;
+  padding: 40px  20px 120px;
   margin-top: 60px;
   background-color: var(--third-color);
-  width: 50%;
+  width: 100%;
   position: relative;
 }
 
@@ -2219,15 +2304,16 @@ align-items: center;
 
 .contact_content {
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   align-items: stretch;
-  margin: 60px 15vw;
+  flex-direction: column-reverse;
+  margin: 0px 0vw 0;
   box-shadow: var(--box-shadow);
 
 }
 
 .contact_content > * {
-  width: 50%;
+  width: 100%;
 }
 
 .contact_content ul {
