@@ -1331,6 +1331,7 @@ align-items: center;
   background-color: transparent;
   position: relative ;
   z-index: 1500000 !important;
+  transition: all 2s ease-in-out;
 }
 
 .nav * {
@@ -1348,15 +1349,17 @@ align-items: center;
 
 .nav .menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -10px;
+  left: -10px;
+  height: 110%;
+  width: 110%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: black;
+  animation: appear 0.5s ease-in-out;
+
 }
 
 .menu > * {
@@ -1374,6 +1377,19 @@ align-items: center;
 .menu button a {
   padding: 20px;
   margin: 0px;
+}
+
+.menu .croix {
+  position: absolute;
+  top: 20px;
+  right: 15%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  text-align: right  !important;
+  display: flex;
+  align-items: flex-end;
 }
 
 /********************************************************************* HOME *********************************************************************/ 
@@ -2104,16 +2120,17 @@ align-items: center;
 }
 
 .actions_top h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: white;
   z-index: 2;
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  left: 0px;
+  width: 100%;
   background-color: var(--third-color);
   padding: 20px 40px;
-  border-radius: 2rem 0 0 0;
+  border-radius: 2rem  2rem 0 0;
 }
 
 .actions_content {
@@ -2156,6 +2173,11 @@ align-items: center;
   margin-bottom: 60px;
 }
 
+.action h1 {
+  font-size: 2rem;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
 
 .action_content {
   width: 100%;
