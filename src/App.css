@@ -2385,4 +2385,9 @@ align-items: center;
   cursor: pointer;
 }
 
+.mentions h1 {
+  font-size: 2rem;
+  text-align: left;
+}
+
 }
