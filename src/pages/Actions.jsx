@@ -5,7 +5,7 @@ import papa from "papaparse";
 import { Link } from "react-router-dom";
 import actions from "../assets/actions.jpg";
 
-function Actions({ helmet }) {
+function Actions({ helmet, langue }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -46,7 +46,7 @@ function Actions({ helmet }) {
         <meta name="description" content={helmet.description} />
       </Helmet>
       <section className="actions_top">
-        <h1>Nos actions</h1>
+        <h1>{langue ? "Nos actions" : "Nout zaksyon"}</h1>
         <img src={actions} alt="" />
         <div className="veil" />
       </section>

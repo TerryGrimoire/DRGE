@@ -3,12 +3,11 @@ import { Helmet } from "react-helmet";
 
 import contact from "../assets/contact.jpg";
 import federation from "../assets/federation.png";
-import tel from "../assets/tel.png";
 import mail from "../assets/mail.png";
 import ancre from "../assets/ancre.png";
 import monde from "../assets/monde.png";
 
-function Contact({ helmet }) {
+function Contact({ helmet, langue }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,7 +19,7 @@ function Contact({ helmet }) {
         <meta name="description" content={helmet.description} />
       </Helmet>
       <section className="actions_top">
-        <h1>Contact</h1>
+        <h1>{langue ? "Contact" : "Kontakt"}</h1>
         <img src={contact} alt="" />
         <div className="veil" />
       </section>
@@ -31,7 +30,7 @@ function Contact({ helmet }) {
         />
         <ul>
           <li>
-            <h5>Nous joindre :</h5>
+            <h5>{langue ? "Nous joindre :" : "Kontakt anou"}</h5>
           </li>
 
           <li>
@@ -39,13 +38,16 @@ function Contact({ helmet }) {
             <a href="mailto:reunion@dtge.org">reunion@dtge.org</a>
           </li>
           <li>
-            <img src={tel} alt="" /> <p>06.32.49.22.39 | 06.27.45.86.27</p>
+            <img src={monde} alt="" />{" "}
+            <p>
+              {langue
+                ? "Une fédération d'échelle nationale"
+                : "In fédérasyon nasyonal"}
+            </p>
           </li>
           <li>
-            <img src={monde} alt="" /> <p>Une fédération d'échelle nationale</p>
-          </li>
-          <li>
-            <img src={ancre} alt="" /> <p>Un ancrage Réunionnais</p>
+            <img src={ancre} alt="" />{" "}
+            <p>{langue ? "Un ancrage Réunionnais" : "In lankraj réyoné"}</p>
           </li>
         </ul>
       </section>
