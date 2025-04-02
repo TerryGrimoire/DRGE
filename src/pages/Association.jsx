@@ -12,6 +12,7 @@ function Association({ helmet, langue }) {
 
   const [data, setData] = useState([]);
   const [mots, setMots] = useState([]);
+  const [ecoles, setEcoles] = useState([]);
 
   const prepareData = (data2) => {
     // j correspond aux lignes de A à ZZZ sur fichier Excel
@@ -72,6 +73,35 @@ function Association({ helmet, langue }) {
       .then((text) => papa.parse(text))
       .then((data2) => prepareData2(data2.data));
   }, []);
+
+  const prepareData3 = (data2) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data2.map((line) => {
+      data2[0].forEach((key, j) => {
+        obj = { ...obj, [key]: line[j] };
+      });
+
+      return obj;
+    });
+
+    json.shift();
+    setEcoles(json);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    fetch(import.meta.env.VITE_HOME)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data2) => prepareData3(data2.data));
+  }, []);
+
+  const ecolo = ecoles.map((eco) => eco.ecoles);
 
   return (
     <main className="association">
@@ -160,6 +190,18 @@ function Association({ helmet, langue }) {
                 ))}
               </ul>
             </div>
+          ))}
+        </div>
+      </section>
+      <section className="footer_partenaires">
+        <h3>
+          {langue
+            ? "Nos membres sont passés par ces écoles"
+            : "Nout manb la pas par zékol la"}
+        </h3>
+        <div>
+          {ecolo.map((ecole) => (
+            <img src={ecole} alt={`logo de l'école`} />
           ))}
         </div>
       </section>

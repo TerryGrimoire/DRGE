@@ -1024,6 +1024,8 @@ align-items: center;
   justify-content: center;
   align-items: center;
   display: flex;
+  position: relative;
+
 }
 .action_content > * {
   padding: 0 15vw;
@@ -1149,6 +1151,16 @@ align-items: center;
  font-weight: bold;
  cursor: pointer;
 }
+
+.action_docs {
+  width: 10%;
+  box-shadow: var(--box-shadow);
+  position:absolute;
+  top: 65vh;
+  right: 30px;
+  padding: 20px;
+  text-decoration: underline;
+}
 /********************************************************************* CONTACT *********************************************************************/ 
 
 .contact {
@@ -1175,7 +1187,7 @@ align-items: center;
   background-color: var(--secondary-bg-color);
   padding: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }
@@ -1202,6 +1214,16 @@ align-items: center;
 .contact_content ul li h5 {
   font-size: 2rem;
   margin-bottom: 20px;
+}
+
+.contact_content >div {
+  padding: 40px;
+}
+
+.contact_content div div img {
+  width: 40px;
+  height: 40px;
+  margin: 15px 15px 5px 0;
 }
 /********************************************************************* ERREUR404 *********************************************************************/ 
 .error {
@@ -1359,7 +1381,7 @@ align-items: center;
 }
 
 .footer_partenaires img {
-  height: 60px;
+  height: 100px;
   width: auto;
   margin: 40px;
   object-fit: contain;
@@ -2450,6 +2472,22 @@ align-items: center;
  border: none;
  font-weight: bold;
  cursor: pointer;
+}
+
+.action_docs {
+  top: 2vh;
+  right: 2px;
+  text-align: right;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 4;
+  display: block;
+  width: 100%;
+}
+
+.action_docs a {
+  background-color: transparent;
+  color: white;
 }
 /********************************************************************* CONTACT *********************************************************************/ 
 

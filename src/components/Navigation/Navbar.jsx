@@ -5,6 +5,7 @@ import Facebook from "../../assets/facebook.png";
 import Instagram from "../../assets/instagram.png";
 import Linkedin from "../../assets/linkedin.png";
 import Youtube from "../../assets/youtube.png";
+import Tiktok from "../../assets/tiktok.png";
 
 function Navbar({ langue }) {
   return (
@@ -52,6 +53,13 @@ function Navbar({ langue }) {
           rel="noreferrer"
         >
           <img src={Youtube} alt="logo de Youtube" />
+        </a>
+        <a
+          href="https://www.tiktok.com/@dtge.reunion?_t=ZN-8vCjhpfGIFe&_r=1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={Tiktok} alt="logo de TikTok" />
         </a>
       </div>
     </div>

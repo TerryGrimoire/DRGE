@@ -52,6 +52,11 @@ function Action({ helmet }) {
 
       {actionData ? (
         <section className="action_content">
+          <div className="action_docs">
+            <a href={actionData.documents} target="_blank" rel="noreferrer">
+              Télécharger les documents associés
+            </a>
+          </div>
           <section className="actions_top">
             <h1>{actionData.titre}</h1>
             <img src={actionData.image} alt="" />
