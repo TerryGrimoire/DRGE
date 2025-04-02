@@ -8,36 +8,36 @@ const actionsFr = [
     id: 0,
     img: interventions,
     alt: "",
-    titre: "Interventions dans des lycées",
+    titre: "Interventions dans les lycées",
     lien: "/Actions/4",
     texte:
-      "Dans les lycées des territoires, nous intervenons pour informer les élèves sur les choix possibles après le bac, témoigner de nos parcours et les encourager à davantage “oser” les filières sélectives afin de lever l'autocensure. Puisqu'ils sont originaires du même territoire et proches d'eux en âge, les lycéens peuvent s'identifier à nos intervenants et se projeter au sein de parcours qu'ils n'auraient pas entrepris autrement.",
+      "Nous intervenons dans les établissements scolaires de La Réunion pour inspirer les élèves à envisager des parcours d'excellence. À travers nos témoignages et nos expériences, nous levons l'autocensure et montrons que, tout comme nous, ils peuvent réussir dans ces filières exigeantes.",
   },
   {
     id: 1,
     img: mentorat,
     alt: "",
-    titre: "Mentorat pour les lycéens",
+    titre: "Accompagnement personnalisé",
     lien: "/Actions/1",
     texte:
-      "Afin d'être accompagné de manière individualisée, tout lycéen le demandant se voit attribuer un parrain ou une marraine, formé par nos équipes locales. Le profil du parrain, étudiant ou diplômé, plus ou moins âgé, dépend des envies et des besoins du lycéen. Fort de sa propre expérience, le parrain ou la marraine est en mesure d'établir une relation de confiance avec son filleul. Son rôle est de le guider dans la construction de son parcours et de ses choix d'orientation.",
+      "Chaque jeune de La Réunion peut bénéficier d'un parrain ou d'une marraine, formé·e pour l'accompagner dans ses choix d'orientation scolaire. Ce mentorat sur mesure établit une relation de confiance et offre un soutien personnalisé pour construire son avenir.",
   },
   {
     id: 2,
     img: bourse,
     alt: "",
-    titre: "Distribution de bourses",
+    titre: "Soutien financier pour l'avenir ",
     lien: "/Actions/2",
     texte:
-      "Pour les élèves que nous accompagnons, étudier dans une formation longue signifie bien souvent partir de son territoire car ces écoles sont bien souvent concentrées dans quelques métropoles. En conséquence, les coûts de l'éloignement pèsent lourdement pour les familles. Pour que les moyens financiers de chacun n'entravent plus les lycéens des territoires dans la poursuite d'études ambitieuses, nous développons, en partenariat avec les acteurs et les entreprises de nos territoires, des dispositifs de bourses.",
+      "Afin de réduire les obstacles financiers liés à l'éloignement, nous distribuons des bourses pour alléger les frais de déplacement et d'installation. Ces aides permettent aux jeunes de se concentrer sur leurs études sans contraintes financières.",
   },
   {
     id: 3,
     img: rencontres,
     alt: "",
-    titre: "Rencontre avec les acteurs institutionnels",
+    titre: "Créer des synergies locales et nationales",
     texte:
-      "Au travers de rencontres avec tous ceux qui font vivre nos territoires, entreprises, institutionnels et associations, nous voulons contribuer à valoriser les réussites d'aujourd'hui et à construire celles de demain. Parce que l'action ne se passe pas uniquement à l'échelle locale mais beaucoup à l'échelle nationale, DRGE a sauté la mer pour rencontrer différents membres du ministère des outre-mers et échanger avec eux sur les problématiques d'égalité des chances dans notre territoire.",
+      "Nous tissons des liens entre les acteurs locaux et nationaux pour favoriser l'égalité des chances et l'insertion professionnelle de nos membres. En rencontrant ces acteurs, nous contribuons à créer des synergies et à promouvoir l'accès des jeunes de La Réunion aux grandes écoles.",
   },
 ];
 

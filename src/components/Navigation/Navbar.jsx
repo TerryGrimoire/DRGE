@@ -6,7 +6,7 @@ import Instagram from "../../assets/instagram.png";
 import Linkedin from "../../assets/linkedin.png";
 import Youtube from "../../assets/youtube.png";
 
-function Navbar() {
+function Navbar({ langue }) {
   return (
     <div className="desktop navbar">
       <Link to="/">
@@ -17,10 +17,12 @@ function Navbar() {
         />
       </Link>
       <div className="navigation">
-        <Link to="/">Accueil</Link>
-        <Link to="/Association">L'association</Link>
-        <Link to="/Actions">Nos actions</Link>
-        <Link to="/Contact">Contact</Link>
+        <Link to="/">{langue ? "Accueil" : "Akey"}</Link>
+        <Link to="/Association">
+          {langue ? "L'association" : "Lasosyasyon"}
+        </Link>
+        <Link to="/Actions">{langue ? "Nos actions" : "Nout zaksyon"}</Link>
+        <Link to="/Contact">{langue ? "Contact" : "Kontakt"}</Link>
       </div>
       <div>
         <a
