@@ -73,6 +73,7 @@ export default function Home({ helmet, langue }) {
   });
   const missions = langue ? missionsFR : missionsRe;
   const actions = langue ? actionsFR : actionsRe;
+  const ecolo = data.map((eco) => eco.presse);
   return (
     <main className="home_main">
       <Helmet>
@@ -209,6 +210,14 @@ export default function Home({ helmet, langue }) {
                 )}
               </article>
             </div>
+          ))}
+        </div>
+      </section>
+      <section className="footer_partenaires">
+        <h3>{langue ? "Ils parlent de nous" : "Bana i koz de nou"}</h3>
+        <div>
+          {ecolo.map((ecole) => (
+            <img src={ecole} alt={`logo de l'école`} />
           ))}
         </div>
       </section>
