@@ -78,8 +78,8 @@ function Contact({ helmet, langue }) {
             <img src={monde} alt="" />{" "}
             <p>
               {langue
-                ? "Une fédération d'échelle nationale"
-                : "In fédérasyon nasyonal"}
+                ? "Nous sommes membres de la Fédération Des Territoires aux Grandes Ecoles"
+                : "Nou lé manb la fédérasyon Des Territoires aux Grandes Ecoles"}
             </p>
           </li>
           <li>
