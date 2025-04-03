@@ -192,6 +192,21 @@ function Association({ helmet, langue }) {
             </div>
           ))}
         </div>
+        <h4>
+          {langue
+            ? "Découvrez les anciens président.es de l'association"
+            : "Dékouv bann zansyin prézidan lasosyasyon"}
+        </h4>
+        <div className="anciens">
+          {data
+            .filter((elo) => elo.anciens !== "")
+            .map((president) => (
+              <div>
+                <h5>{president.anciens.split(":")[0]}</h5>
+                <p>{president.anciens.split(":")[1]}</p>
+              </div>
+            ))}
+        </div>
       </section>
       <section className="footer_partenaires">
         <h3>

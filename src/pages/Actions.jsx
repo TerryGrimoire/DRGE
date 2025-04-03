@@ -55,6 +55,7 @@ function Actions({ helmet, langue }) {
           <Link to={`/Actions/${action.id}`}>
             {" "}
             <div>
+              <p>{action.dispositif}</p>
               <img src={action.image} alt={action.titre} />{" "}
               <h5>{action.titre}</h5>
             </div>
