@@ -51,8 +51,8 @@ function Footer({ langue }) {
         </h4>
         <p>
           {langue
-            ? "Chaque don compte pour financer nos actions et permettre à nos bénéficiaires de continuer leurs études. Les donations permettent non seulement de financer des bourses d'installations mais également à notre association de rémunérer des intervenants exterieurs lors de nos sessions de formation."
-            : "Sak don i kont pou finans nout bann zaksyon é permèt nout bann bénéfisièr kontinyé zot zétud. Bann donasyon i permet anou finans les bours linstalasyon mé osi rémunèr bann zintervenan ekstèrn anout lasosyasyon pandan nout bann sesyon formasyon."}
+            ? "Chaque don joue un rôle essentiel pour soutenir nos actions et permettre à nos bénéficiaires de poursuivre leurs études. Les donations servent à financer l'installation des jeunes que nous accompagnons, en couvrant les frais liés à leur mobilité vers l'enseignement supérieur. Elles contribuent également au bon fonctionnement de notre organisation et à la mise en place de nos actions."
+            : "Sak don i zwé in rol ésansyel pou soutyin nout bann zaksyon é permèt nout bann bénéfisyèr poursuiv zot zétud. Lo bann donasyon i serv finans linstalasyon bann jèn ke nou akonpayn. I èd anou péy bann fré lyé a zot mobilité ver lanséynman supérièr. I permèt anou osi finans le bon fonksyonman nout lorganizasyon é finans nout bann zaksyon."}
         </p>
 
         <div className="CTA_container">
