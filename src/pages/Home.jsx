@@ -216,9 +216,11 @@ export default function Home({ helmet, langue }) {
       <section className="footer_partenaires">
         <h3>{langue ? "Ils parlent de nous" : "Bana i koz de nou"}</h3>
         <div>
-          {ecolo.map((ecole) => (
-            <img src={ecole} alt={`logo de l'école`} />
-          ))}
+          {ecolo
+            .filter((el) => el !== "")
+            .map((ecole) => (
+              <img src={ecole} alt={`logo de l'école`} />
+            ))}
         </div>
       </section>
     </main>

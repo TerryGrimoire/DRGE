@@ -104,9 +104,11 @@ function Footer({ langue }) {
           {langue ? "Découvrez nos partenaires" : "Dékouv nout bann parténèr"}
         </h4>
         <div>
-          {partenaires.map((el) => (
-            <img src={el} alt="logo partenaire" />
-          ))}
+          {partenaires
+            .filter((el) => el !== "")
+            .map((el) => (
+              <img src={el} alt="logo partenaire" />
+            ))}
         </div>
       </section>
       <div className="footer_bottom">
